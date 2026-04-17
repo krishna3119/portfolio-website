@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
     return (
-        <footer className="relative py-12 px-6 border-t border-glass-border">
+        <footer className="relative py-12 px-4 sm:px-8 md:px-16 border-t border-glass-border">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="flex flex-col md:flex-row items-center justify-between gap-6"
+                    className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8"
                 >
                     {/* Logo */}
                     <a

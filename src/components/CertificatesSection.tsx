@@ -39,7 +39,7 @@ export default function CertificatesSection() {
     }, [selectedImage]);
 
     return (
-        <section id="certificates" className="relative py-28 md:py-36 px-6">
+        <section id="certificates" className="relative py-28 md:py-36 px-4 sm:px-8 md:px-16">
             <div className="max-w-4xl mx-auto">
                 {/* Section title */}
                 <motion.div
@@ -56,7 +56,7 @@ export default function CertificatesSection() {
                         Credentials
                     </p>
                     <h2
-                        className="section-heading text-4xl md:text-5xl"
+                        className="section-heading text-3xl sm:text-4xl md:text-5xl"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Certificates
@@ -100,7 +100,7 @@ export default function CertificatesSection() {
                                     {cert.image && (
                                         <button
                                             onClick={() => setSelectedImage(cert.image)}
-                                            className="mt-6 px-6 py-2 bg-transparent text-neon border border-neon/50 rounded-md text-sm font-semibold hover:bg-neon hover:text-black transition-colors shadow-[0_0_10px_rgba(204,153,255,0.1)] hover:shadow-[0_0_15px_rgba(204,153,255,0.4)]"
+                                            className="mt-6 px-6 py-2 bg-transparent text-neon border border-neon/50 rounded-md text-sm font-semibold hover:bg-neon hover:text-black transition-colors shadow-[0_0_10px_rgba(204,153,255,0.1)] hover:shadow-[0_0_15px_rgba(204,153,255,0.4)] w-full sm:w-auto"
                                         >
                                             View Certificate
                                         </button>

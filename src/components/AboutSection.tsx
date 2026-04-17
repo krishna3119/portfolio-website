@@ -31,7 +31,7 @@ const fadeUp: Variants = {
 
 export default function AboutSection() {
     return (
-        <section id="about" className="relative py-28 md:py-36 px-6">
+        <section id="about" className="relative py-28 md:py-36 px-4 sm:px-8 md:px-16">
             <div className="max-w-6xl mx-auto">
                 {/* Section title */}
                 <motion.div
@@ -48,7 +48,7 @@ export default function AboutSection() {
                         About Me
                     </p>
                     <h2
-                        className="section-heading text-4xl md:text-5xl"
+                        className="section-heading text-3xl sm:text-4xl md:text-5xl"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Who I Am
@@ -61,12 +61,12 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="glass-card p-8 md:p-12 mb-12"
+                    className="glass-card p-6 sm:p-8 md:p-12 mb-12"
                 >
-                    <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-center text-center md:text-left">
                         <div>
                             <h3
-                                className="text-2xl md:text-3xl font-bold text-text-primary mb-6"
+                                className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary mb-6"
                                 style={{ fontFamily: "var(--font-family-display)" }}
                             >
                                 Computer Science Student &{" "}
@@ -87,7 +87,7 @@ export default function AboutSection() {
                         </div>
 
                         {/* Decorative stat badges */}
-                        <div className="flex md:flex-col gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 md:flex md:flex-col gap-4 w-full">
                             {[
                                 { num: "1", label: "Live Project" },
                                 { num: "2", label: "Technical Projects" },
@@ -113,7 +113,7 @@ export default function AboutSection() {
                 </motion.div>
 
                 {/* Highlight cards */}
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {highlights.map((item, i) => (
                         <motion.div
                             key={item.title}

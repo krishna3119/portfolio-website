@@ -13,7 +13,7 @@ export default function HeroSection() {
     return (
         <section
             id="hero"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0a051e] via-[#030014] to-black"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0a051e] via-[#030014] to-black px-4 sm:px-8 md:px-16"
         >
             {/* Particle background */}
             <ParticleUniverse />
@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(124,58,237,0.08)_0%,_transparent_70%)] z-[1]" />
 
             {/* Content */}
-            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
                 {/* Greeting line */}
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.6 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 glow-text"
+                    className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 glow-text text-center"
                     style={{ fontFamily: "var(--font-family-display)" }}
                 >
                     <span className="text-text-primary">Krishna</span>{" "}
@@ -72,13 +72,13 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.1 }}
-                    className="flex flex-wrap items-center justify-center gap-4"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
                 >
-                    <a href="#projects" className="animated-button flex items-center justify-center">
+                    <a href="#projects" className="animated-button flex items-center justify-center w-full sm:w-auto">
                         <span>View My Work!</span>
                         <span></span>
                     </a>
-                    <a href="#contact" className="animated-button flex items-center justify-center">
+                    <a href="#contact" className="animated-button flex items-center justify-center w-full sm:w-auto">
                         <span>Get in Touch</span>
                         <span></span>
                     </a>

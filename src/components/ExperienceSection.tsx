@@ -37,7 +37,7 @@ const experiences = [
 
 export default function ExperienceSection() {
     return (
-        <section id="experience" className="relative py-28 md:py-36 px-6">
+        <section id="experience" className="relative py-28 md:py-36 px-4 sm:px-8 md:px-16">
             <div className="max-w-4xl mx-auto">
                 {/* Section title */}
                 <motion.div
@@ -54,7 +54,7 @@ export default function ExperienceSection() {
                         Journey
                     </p>
                     <h2
-                        className="section-heading text-4xl md:text-5xl"
+                        className="section-heading text-3xl sm:text-4xl md:text-5xl"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Experience

@@ -275,7 +275,7 @@ const GameComponent = () => {
             {/* Game Over Overlay */}
             {isGameOver && (
                 <div className={`absolute inset-0 z-30 flex flex-col items-center justify-center backdrop-blur-sm transition-all duration-300 ${isGameOver ? 'bg-red-950/40' : 'bg-transparent'}`}>
-                    <h3 className="text-6xl text-white font-bold mb-4 animate-bounce" style={{ fontFamily: "var(--font-family-display)", textShadow: "0 0 20px rgba(255,0,0,0.8)" }}>CRASHED</h3>
+                    <h3 className="text-4xl sm:text-5xl md:text-6xl text-white font-bold mb-4 animate-bounce" style={{ fontFamily: "var(--font-family-display)", textShadow: "0 0 20px rgba(255,0,0,0.8)" }}>CRASHED</h3>
                     <p className="text-3xl mb-8 font-semibold" style={{ color: "var(--color-neon)", fontFamily: "var(--font-family-mono)" }}>Final Score: {uiState.score}</p>
                     <button 
                         onClick={resetGame}
@@ -293,7 +293,7 @@ export default function SkillsPlayground() {
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (
-        <section id="skills" className="relative py-28 md:py-36 px-6 overflow-hidden">
+        <section id="skills" className="relative py-28 md:py-36 px-4 sm:px-8 md:px-16 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -309,15 +309,20 @@ export default function SkillsPlayground() {
                         Skills
                     </p>
                     <h2
-                        className="section-heading text-4xl md:text-5xl mb-4"
+                        className="section-heading text-3xl sm:text-4xl md:text-5xl mb-4"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Skills Playground
                     </h2>
-                    <p className="text-text-secondary max-w-3xl mx-auto text-base md:text-lg">
-                        Explore my tech stack in an interactive gravity canvas.&nbsp;
-                        Drag, toss, and watch the skill blocks collide!
-                    </p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="text-base sm:text-lg md:text-xl text-purple-200/80 max-w-2xl mx-auto"
+                    >
+                        Not just skills, play with them.
+                    </motion.p>
                 </motion.div>
 
                 {!isPlaying ? (
@@ -327,9 +332,8 @@ export default function SkillsPlayground() {
                         className="flex justify-center items-center h-[500px] glass-card"
                     >
                         <div className="text-center">
-                            <p className="text-text-secondary mb-6 max-w-md mx-auto text-lg">
-                                Drag, toss, and watch them bounce!&nbsp;
-                                Discover my tech stack interactively.
+                            <p className="text-sm sm:text-base md:text-lg text-purple-300/70 max-w-xl mx-auto mb-6">
+                                Play and explore my skills in action.
                             </p>
                             <button onClick={() => setIsPlaying(true)} className="play-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36px" height="36px">

@@ -131,7 +131,7 @@ function ProjectCard({ project, index, isDevelopment }: { project: any, index: n
 
 export default function ProjectsSection() {
     return (
-        <section id="projects" className="relative py-28 md:py-36 px-6">
+        <section id="projects" className="relative py-28 md:py-36 px-4 sm:px-8 md:px-16">
             <div className="max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -147,7 +147,7 @@ export default function ProjectsSection() {
                         Portfolio
                     </p>
                     <h2
-                        className="section-heading text-4xl md:text-5xl"
+                        className="section-heading text-3xl sm:text-4xl md:text-5xl"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Featured Projects
@@ -157,12 +157,12 @@ export default function ProjectsSection() {
                 {/* Development Projects Section */}
                 <div className="mb-24">
                     <h3
-                        className="text-2xl md:text-3xl text-center md:text-left mb-10 font-bold text-white tracking-wide"
+                        className="text-2xl sm:text-3xl text-center md:text-left mb-10 font-bold text-white tracking-wide"
                         style={{ fontFamily: "var(--font-family-display)" }}
                     >
                         Development Projects
                     </h3>
-                    <div className="grid md:grid-cols-2 gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                         {developmentProjects.map((project, i) => (
                             <ProjectCard key={project.title} project={project} index={i} isDevelopment={true} />
                         ))}
@@ -172,14 +172,13 @@ export default function ProjectsSection() {
                 {/* Academic Projects Section */}
                 <div>
                     <h3
-                        className="text-2xl md:text-3xl text-center md:text-left mb-10 font-bold tracking-wide"
+                        className="text-2xl sm:text-3xl text-center md:text-left mb-10 font-bold tracking-wide"
                         style={{ fontFamily: "var(--font-family-display)", color: "rgba(255, 255, 255, 0.85)" }}
                     >
                         Academic Projects
                     </h3>
                     {/* Uses 3 column grid for slight visual de-emphasis compared to 2 column development ones */}
-                    {/* Uses 3 column grid for slight visual de-emphasis compared to 2 column development ones */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {academicProjects.map((project, i) => (
                             <ProjectCard key={project.title} project={project} index={i} isDevelopment={false} />
                         ))}
@@ -202,7 +201,7 @@ export default function ProjectsSection() {
                             Creative Work
                         </p>
                         <h2
-                            className="section-heading text-4xl md:text-5xl"
+                            className="section-heading text-3xl sm:text-4xl md:text-5xl"
                             style={{ fontFamily: "var(--font-family-display)" }}
                         >
                             Designs
@@ -227,7 +226,8 @@ export default function ProjectsSection() {
                                         <img
                                             src={design.image}
                                             alt={design.title}
-                                            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }}
+                                            className="w-full h-auto object-cover"
+                                            style={{ borderRadius: "20px" }}
                                         />
                                         <div className="design-card-title">
                                             <span>{design.title}</span>
